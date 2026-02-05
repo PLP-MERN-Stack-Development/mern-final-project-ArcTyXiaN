@@ -1,0 +1,24 @@
+# Ignore media files
+*.mp4
+
+# Ignore HTML files
+*.html
+
+# Ignore associated HTML folders
+*_files/
+
+# Ignore JSON data files
+*.json
+
+# Node modules (if you have a Node project)
+node_modules/
+
+# Build/dist folders
+dist/
+build/
+
+# OS/Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
