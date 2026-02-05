@@ -63,7 +63,7 @@ Do not commit real secrets. Use local `.env` files and commit only `.env.example
 1. Backend
 
 ```powershell
-cd c:\Users\Administrator\Documents\Boomerange\GOODWORK\BACKEND
+cd BACKEND
 npm install
 # For development (if the project has nodemon):
 npm run dev
@@ -74,7 +74,7 @@ node src/server.js
 2. Frontend
 
 ```powershell
-cd c:\Users\Administrator\Documents\Boomerange\GOODWORK\FRONTEND
+cd FRONTEND
 npm install
 npm run dev
 ```
@@ -100,7 +100,7 @@ Use an `Authorization: Bearer <token>` header for protected routes.
 ## Documentation
 
 - `DOCS/PURPOSE.md` - project purpose, goals, target audience, and roadmap.
-- Full project documentation (HackMD): https://hackmd.io/@I5OyzHQDSGWGWqeLjg1tSg/S1dUmq2eZe
+- `DOCS/TECHNICAL.md` - technical architecture, API details, and development notes.
 - Demo video: `DOCS/goodwork.mp4`
 - Presentation: `DOCS/GOODWORK_ Find Your Perfect Role.html`
 
