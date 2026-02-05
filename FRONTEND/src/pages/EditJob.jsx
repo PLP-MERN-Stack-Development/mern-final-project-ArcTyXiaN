@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { getJobById, updateJob } from "@/api/jobs";
 import { useParams, useNavigate } from "react-router-dom";
 import { Briefcase, Building2, MapPin, DollarSign, FileText, Calendar, Save, Loader, Link as LinkIcon } from "lucide-react";
@@ -23,7 +23,7 @@ const EditJob = () => {
   const [updating, setUpdating] = useState(false);
   const [message, setMessage] = useState("");
 
-  const fetchJob = async () => {
+  const fetchJob = useCallback(async () => {
     try {
       const data = await getJobById(id);
       setForm({
@@ -39,15 +39,16 @@ const EditJob = () => {
         verificationLink: data.verificationLink || "",
       });
     } catch (err) {
+      console.error(err);
       setMessage("Error loading job");
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
 
   useEffect(() => {
     fetchJob();
-  }, []);
+  }, [fetchJob]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

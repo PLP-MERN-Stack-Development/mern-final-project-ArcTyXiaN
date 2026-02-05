@@ -29,6 +29,7 @@ const Home = () => {
         setFilteredJobs([]);
       }
     } catch (err) {
+      console.error(err);
       setError("Failed to load jobs");
     } finally {
       setLoading(false);
